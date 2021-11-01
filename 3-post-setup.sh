@@ -33,13 +33,12 @@ EOF
 
 echo -e "\nEnabling essential services"
 
-systemctl enable cups.service
 ntpd -qg
 systemctl enable ntpd.service
 systemctl disable dhcpcd.service
 systemctl stop dhcpcd.service
 systemctl enable NetworkManager.service
-systemctl enable bluetooth
+
 echo "
 ###############################################################################
 # Cleaning
